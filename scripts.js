@@ -20,7 +20,7 @@ event.preventDefault();
  resetPassword(id, email).then(response => {
  alert(response.message);
 }).catch(error => {
-                alert('Error: ' + error.message);
+                alert('Error : ' + error.message);
 });
  });
 }
@@ -53,10 +53,8 @@ reject({ message: 'Invalid ID or Email.' });
 }, 1000);
  });
 }
-
-
 document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', (event) => {
-        console.log(`Navigating to ${event.target.textContent}`);
+link.addEventListener('click', (event) => {
+console.log(`Navigating to ${event.target.textContent}`);
     });
 });
