@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students - School Management System</title>
+    <title>Admin - School Management System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Students</h1>
+        <h1>Admin Dashboard</h1>
         <nav>
-            <a href="student_dashboard.php">Home</a>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="classes.html">Classes</a>
+            <a href="teachers.html">Teachers</a>
             <a href="students.html">Students</a>
-            <a href="subjects.html">Subjects</a>
             <a href="enroll_course.html">Enroll in Course</a>
-            <a href="logout.php">Logout</a>
+            <a href="admin.html">Admin</a>
+            <button style="left: auto; text-align: right;"><a href="logout.php">Logout</a></button>
         </nav>
     </header>
     <main>
-        <!-- Student List -->
         <h2>Student List</h2>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Email</th>
                     <th>Stage</th>
                 </tr>
             </thead>
@@ -34,6 +38,20 @@
             </tbody>
         </table>
 
+        <h2>Class List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Class Name</th>
+                    <th>Teacher</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="class-list">
+                <!-- Class data will be dynamically populated here -->
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy; 2024 School Management System. All rights reserved.</p>

@@ -1,3 +1,28 @@
+<?php
+session_start();
+include 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user_id = $_POST['user_id'];
+    $email = $_POST['email'];
+
+    // Verify the user's identity
+    $sql = "SELECT * FROM users WHERE id = '$user_id' AND email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, set session and redirect to reset password page
+        $_SESSION['user_id'] = $user_id;
+        header("Location: reset_password.php");
+        exit;
+    } else {
+        echo "<script>alert('Invalid User ID or Email');</script>";
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -11,13 +11,14 @@
     <header>
         <h1>Classes</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="students.html">Students</a>
-            <a href="teachers.html">Teachers</a>
+            <a href="teacher_dashboard.php">Home</a>
+            <a href="teachers.php">Teachers</a>
             <a href="classes.html">Classes</a>
+            <a href="logout.php">Logout</a>
         </nav>
     </header>
     <main>
+        <!-- Class List -->
         <h2>Class List</h2>
         <table>
             <thead>
@@ -25,12 +26,16 @@
                     <th>ID</th>
                     <th>Class Name</th>
                     <th>Teacher</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                
+            <tbody id="class-list">
+                <!-- Class data will be dynamically populated here -->
             </tbody>
         </table>
+
+       
+        
     </main>
     <footer>
         <p>&copy; 2024 School Management System. All rights reserved.</p>
